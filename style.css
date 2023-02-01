@@ -1,0 +1,27 @@
+
+
+.jumbotron {
+/*	padding: 2rem 1rem;*/
+	padding-top: 5rem;
+	background-color: #e2edff;
+}
+
+.container .row {
+	text-align: justify;
+}
+
+#projects {
+	background-color: #e2edff;
+	padding-top: 5rem;
+	margin-top: -50px;
+}
+}
+
+#contacts {
+	padding-top: 5rem;
+	margin-top: -100px;
+}
+
+section {
+	padding-top: 5rem;
+}
