@@ -11,6 +11,11 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
+    <!-- AOS Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -77,10 +82,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>Avglocom Software merupakan pengembang software IT dengan fokus pada pengembangan Software Basis Data (Data Base) dan Pengembangan Website (Web Developer) Baik Website Sekolah, Website Lembaga Pemerintahan maupun swasta.</p>            
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left"  data-aos-duration="1000" data-aos-delay="200">
             <p>Sejak memulai usahanya pada tahun 2011, Avglocom Software telah mengembangkan software yang merupakan Portofolio kami dan telah di aplikasikan di Perusahaan, Klinik, Apotek, Koperasi, KSP, LKM/BKD.
 </p>            
           </div>
@@ -157,6 +162,27 @@
     <!-- akhir projects -->
 
 
+    <!-- Gallery -->
+<!--     <section class="galeri">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <a href="#">
+              <img src="" alt="">
+            </a>
+          </div>
+        </div>        
+      </div>
+    </section> -->
+    <!-- Akhir Gallery -->
+
+
+
     <!-- Contacts -->
     <section id="contacts">
       <div class="container">
@@ -218,6 +244,30 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galeriImage = document.querySelectorAll('.card');
+
+      galeriImage.forEach((card, i) => {
+        card.dataset.aos = 'flip-left';
+        card.dataset.aosDelay = i * 100;
+        card.dataset.aosDuration = 500;
+      });
+
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+      gsap.from('.jumbotron img', {duration: 1, y:-100, opacity:0, ease: 'bounce'})
+      // gsap.from('.navbar', {duration:1.5, y:'-100%', opacity:0, ease: 'back'})
+    </script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbx6M99UjHWNv7uPXmaAqTsDb4t1ARbLybSbO2Cpno6CK6hNQ-3U_LKYKBDQYki_g_ro/exec'
